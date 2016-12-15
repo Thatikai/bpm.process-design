@@ -1,0 +1,19 @@
+{
+  "name": "bpm.process-design",
+  "version": "1.0.0",
+  "description": "Tool to design process map",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thatikai/bpm.process-design.git"
+  },
+  "author": "Thatikai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thatikai/bpm.process-design/issues"
+  },
+  "homepage": "https://github.com/Thatikai/bpm.process-design#readme"
+}
