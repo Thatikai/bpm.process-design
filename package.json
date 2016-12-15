@@ -15,5 +15,27 @@
   "bugs": {
     "url": "https://github.com/Thatikai/bpm.process-design/issues"
   },
-  "homepage": "https://github.com/Thatikai/bpm.process-design#readme"
+  "homepage": "https://github.com/Thatikai/bpm.process-design#readme",
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^1.5.0",
+    "fs": "0.0.1-security",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-iife": "^0.3.0",
+    "gulp-less": "^3.3.0",
+    "gulp-live-server": "0.0.30",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jscs": "^3.0.7",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.2"
+  }
 }
