@@ -13,9 +13,9 @@ gulp.task('build:template', function() {
             ]
         )
         .pipe(templateCache(
-            'process-design.template.js',
+            'marble.template.js',
             {
-                module: 'process-design.templates',
+                module: 'marble.templates',
                 root: '/',
                 standalone: true
             }

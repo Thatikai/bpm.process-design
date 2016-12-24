@@ -14,7 +14,7 @@
         // enable additional rules
         "indent": ["error", 4],
         "quotes": ["error", "single"],
-        "max-len": ["error", "150"]
+        "max-len": ["error", "150"],
         // override default options for rules from base configurations
         
         // disable rules from base configurations

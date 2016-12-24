@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 gulp.task('build:less', function () {
 
-    return gulp.src('ui/style/process-design.less')
+    return gulp.src('ui/style/marble.less')
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({

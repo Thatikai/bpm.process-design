@@ -16,10 +16,10 @@ requireDir('./dev', { recurse: true });
 
 gulp.task('init', ['config']);
 gulp.task('copy', function (done) {
-    runSequence('copy:css', 'copy:html', 'copy:asset', 'copy:font', done);
+    runSequence('copy:css', 'copy:asset', 'copy:font', done);
 });
 gulp.task('build', function (done) {
-    runSequence('build:lib', 'build:src', 'build:less', 'build:template', done);
+    runSequence('build:lib', 'build:src', 'build:less', 'build:template', 'build:inject', done);
 });
 gulp.task('default', function (done) {
     runSequence('copy', 'build', done);

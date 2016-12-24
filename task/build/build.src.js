@@ -15,7 +15,7 @@ gulp.task('build:src', function () {
         ])
         .pipe(sourcemaps.init())
         .pipe(iife())
-        .pipe(concat('process-design.src.js'))
+        .pipe(concat('marble.src.js'))
         .pipe(uglify())
         .on('error', gutil.log)
         .pipe(sourcemaps.write('./'))

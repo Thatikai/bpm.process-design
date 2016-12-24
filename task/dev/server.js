@@ -17,6 +17,5 @@ gulp.task('serve', ['copy', 'build'], function() {
 
     gulp.watch(['ui/src/**/*.js'], ['build:src']);
     gulp.watch(['ui/src/**/*.html'], ['build:template']);
-    gulp.watch(['ui/index.html'], ['copy:html']);
     gulp.watch(['ui/style/**/*'], ['build:less']);
 });

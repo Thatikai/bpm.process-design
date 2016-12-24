@@ -11,7 +11,7 @@ gulp.task('build:lib', function () {
 
     gulp.src(files)
         .pipe(sourcemaps.init())
-        .pipe(concat('process-design.lib.js'))
+        .pipe(concat('marble.lib.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.target + '/ui/dist'));
