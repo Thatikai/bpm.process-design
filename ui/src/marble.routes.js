@@ -2,8 +2,7 @@ angular
 .module(
     'marble.routes',
     [
-        'ui.router',
-        'marble.ui.loader.view-loader.component'
+        'ui.router'
     ]
 )
 .config(
@@ -11,19 +10,10 @@ angular
         '$stateProvider',
         function ($stateProvider) {
             'use strict';
-            $stateProvider.state('base',
-                    {
-                        url: '',
-                        abstract: true,
-                        templateUrl: '/marble/marble.html'
-                    }
-                )
-                .state(
-                    'home',
+            $stateProvider.state('home',
                     {
                         url: '/home',
-                        abstract: true,
-                        templateUrl: '/marble/dashboard/dashboard.view.html'
+                        templateUrl: '/marble/marble-home.html'
                     }
                 );
         }

@@ -19,7 +19,7 @@ angular
         function ($log, $scope, $timeout) {
             'use strict';
             var ctrl = this;
-
+            console.log(ctrl);
             ctrl.loading = false;
 
             $scope.$on('$stateChangeStart', function (ev) {
