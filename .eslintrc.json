@@ -1,0 +1,23 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "sourceType": "script",
+        "ecmaFeatures": {
+            "impliedStrict": false
+        }
+    },
+    "extends": [
+            "eslint:recommended",
+            "angular"
+        ],
+    "rules": {
+        // enable additional rules
+        "indent": ["error", 4],
+        "quotes": ["error", "single"],
+        "max-len": ["error", "150"],
+        // override default options for rules from base configurations
+        
+        // disable rules from base configurations
+        "no-console": "off"
+    }
+}

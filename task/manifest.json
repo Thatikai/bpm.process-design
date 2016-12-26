@@ -1,0 +1,14 @@
+{
+    "libs": [
+        "node_modules/angular/angular.js",
+        "node_modules/angular-animate/angular-animate.js",
+        "node_modules/angular-sanitize/angular-sanitize.js",
+        "node_modules/angular-cookies/angular-cookies.js",
+        "node_modules/angular-messages/angular-messages.js",
+        "node_modules/angular-ui-router/release/angular-ui-router.js",
+        "node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js",
+        "node_modules/angular-spinners/dist/angular-spinners.min.js",
+        "node_modules/angular-resizable/angular-resizable.min.js",
+        "node_modules/lodash/lodash.js"
+    ]
+}

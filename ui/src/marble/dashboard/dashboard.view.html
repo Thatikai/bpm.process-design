@@ -1,0 +1,110 @@
+<div>
+    <h1 class="display-1">{{ 'view.dashboard.heading' | localize }}</h1>
+    <hr />
+    <h3 class="title">{{ 'view.dashboard.browse' | localize }}</h3>
+    <div ng-repeat="exam in $ctrl.exams">
+        <div class="panel panel-default" ng-repeat="module in exam.modules">
+            <div class="panel-heading clearfix">
+                <button class="btn btn-primary btn-sm pull-right" ng-click="$ctrl.addForm(module);">
+                    <i class="fa fa-plus"></i> {{ 'action.form.add' | localize }}
+                </button>
+                <h3 class="panel-title pull-left">{{ exam.name }} {{ 'abbreviation.version' | localize }}{{ exam.examVersion }} &ndash; {{ module.title }}</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="" ng-click="$ctrl.sort(module, 'setName')">
+                                    {{ 'entity.module.heading.name' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted" ng-if="module.sortOn !== 'setName'"></i>
+                                <i class="fa" ng-class="{
+                                    'fa-sort-desc': module.sortOrder,
+                                    'fa-sort-asc': !module.sortOrder
+                                }" ng-if="module.sortOn === 'setName'"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="$ctrl.sort(module, 'formCount')">
+                                    {{ 'entity.module.heading.forms' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted" ng-if="module.sortOn !== 'formCount'"></i>
+                                <i class="fa" ng-class="{
+                                    'fa-sort-desc': module.sortOrder,
+                                    'fa-sort-asc': !module.sortOrder
+                                }" ng-if="module.sortOn === 'formCount'"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="">
+                                    {{ 'entity.module.heading.status' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="">
+                                    {{ 'entity.module.heading.progress' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="$ctrl.sort(module, 'lastModified')">
+                                    {{ 'entity.module.heading.updated' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted" ng-if="module.sortOn !== 'lastModified'"></i>
+                                <i class="fa" ng-class="{
+                                    'fa-sort-desc': module.sortOrder,
+                                    'fa-sort-asc': !module.sortOrder
+                                }" ng-if="module.sortOn === 'lastModified'"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="">
+                                    {{ 'target.system.gg' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="">
+                                    {{ 'target.system.lds' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted"></i>
+                            </th>
+                            <th class="text-center">
+                                <a href="" ng-click="">
+                                    {{ 'entity.module.heading.grade' | localize }}
+                                </a>
+                                <i class="fa fa-sort text-muted"></i>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="formset in module.formsets | orderBy:module.sortOn:module.sortOrder | limitTo:module.displayCount">
+                            <td class="name-col">
+                                <a ui-sref="form.content({formsetId: formset.id, moduleId: module.id})">
+                                    {{ module.prefix }}&ndash;{{ formset.setName }}
+                                </a>
+                            </td>
+                            <td class="text-center">{{ formset.formCount | number:0 }}</td>
+                            <td class="text-center">&ndash;</td>
+                            <td class="text-center">&ndash;</td>
+                            <td class="text-center">{{ formset.lastModified | moment }}</td>
+                            <td class="text-center">&ndash;</td>
+                            <td class="text-center">&ndash;</td>
+                            <td class="text-center">&ndash;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer clearfix">
+                <div class="pull-right" ng-if="module.formsets.length > $ctrl.defaultCount">
+                    <a href="" ng-click="module.displayCount = null" ng-if="module.displayCount === $ctrl.defaultCount">
+                        {{ 'entity.formset.list.toggle.all' | localize }}
+                    </a>
+                    <a href="" ng-click="module.displayCount = $ctrl.defaultCount" ng-if="!module.displayCount">
+                        {{ 'entity.formset.list.toggle.recent' | localize }}
+                    </a>
+                </div>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</div>
