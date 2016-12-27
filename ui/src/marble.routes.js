@@ -13,17 +13,8 @@ angular
             'use strict';
             $stateProvider.state('base',
                     {
-                        url: '',
-                        abstract: true,
+                        url: '/',
                         templateUrl: '/marble/marble.html'
-                    }
-                )
-                .state(
-                    'home',
-                    {
-                        url: '/home',
-                        abstract: true,
-                        templateUrl: '/marble/dashboard/dashboard.view.html'
                     }
                 );
         }
