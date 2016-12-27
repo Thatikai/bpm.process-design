@@ -10,10 +10,10 @@ angular
         '$stateProvider',
         function ($stateProvider) {
             'use strict';
-            $stateProvider.state('home',
+            $stateProvider.state('base',
                     {
-                        url: '/home',
-                        templateUrl: '/marble/marble-home.html'
+                        url: '/',
+                        templateUrl: '/marble/marble.html'
                     }
                 );
         }

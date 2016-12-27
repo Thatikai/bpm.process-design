@@ -14,5 +14,5 @@ RouteConfig.$inject = [
 function RouteConfig ($urlRouterProvider) {
     'use strict';
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 }
