@@ -7,6 +7,7 @@ gulp.task('copy:font', function () {
     gulp
         .src(
             [
+                'node_modules/materialize-css/dist/fonts/*',
                 'node_modules/font-awesome/fonts/*'
             ]
         )

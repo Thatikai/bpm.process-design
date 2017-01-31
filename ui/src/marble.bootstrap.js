@@ -6,7 +6,6 @@ angular
     var dependencies = [
             'ngAnimate',
             'ui.router',
-            'ui.bootstrap',
             'marble.templates',
             'marble.location.config',
             'marble.route.config',
@@ -15,4 +14,5 @@ angular
         ];
     var app = angular.module(name, dependencies);
     angular.bootstrap(document, [app.name], {strictDi: true});
+    console.log('working');
 });

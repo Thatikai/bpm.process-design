@@ -2,20 +2,18 @@ angular
 .module(
     'marble.tooltip.config',
     [
-        'ui.bootstrap.tooltip'
     ]
 )
 .config(TooltipConfig);
 
 TooltipConfig.$inject = [
-    '$uibTooltipProvider'
 ];
 
-function TooltipConfig ($uibTooltipProvider) {
+function TooltipConfig () {
     'use strict';
 
     // set the default header for delete requests
-    $uibTooltipProvider.options({
-        appendToBody: true
-    });
+    // $uibTooltipProvider.options({
+    //     appendToBody: true
+    // });
 }
